@@ -1,0 +1,27 @@
+// FONTS
+$font-family-sans-serif:		AvenirNextPro, Arial, sans-serif;
+$font-family-heading-serif:		FFMore, Georgia, serif;
+$font-family-serif:				Georgia, serif;
+
+// MEDIA QUERIES
+/* Smartphones (portrait) ----------- */
+$xs:							320px;
+/* Smartphones (portrait) ----------- */
+$s:								480px;
+/* iPads (portrait and landscape) --- */
+$m:								768px;
+/* Desktop -------------------------- */
+$l:								1024px;
+/* Hug ------------------------------ */
+$xl:							1280px;
+
+
+// COLORS
+$brand-color-pink:				#ed019e;
+
+
+// TRANSITIONS
+$transition-duration:			0.2s;
+$transition-timing:				ease-in-out;
+
+$element-max-width:				$xl - 80px;

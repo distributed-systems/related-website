@@ -1,0 +1,7 @@
+header {
+    margin: 75px auto;
+    text-align: center;
+    width: 80%;
+    @include align-items(center);
+}
+

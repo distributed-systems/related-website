@@ -1,0 +1,415 @@
+/* ====================
+*  === FRONT HEADER ===
+*  ==================== */ 
+.front-header {
+		background: transparent url('../../img/background-hands.svg') no-repeat 0 center;
+		background-position: center 10%;
+	background-size: 100% auto;
+		
+		@include min-screen($s) {
+			background-position: center 5%;
+		}
+	
+	&__intro {
+		margin-top: 75px;
+		
+		@include min-screen($xl) {
+			margin-top: 125px;
+		}
+	}
+	
+	
+	// === HEADER TITLE ===
+	&__intro-title {
+        text-align: center;
+		font-size: 60px;
+		font-weight: 900;
+		margin: 0 auto;
+        color: #000;
+		width: 80%;
+		margin: auto;
+		margin-top: 45px;
+		line-height: 1.1;
+        
+		// === MEDIA QUERIES == 
+		@include min-screen($l) {
+			font-size: 80px;	
+		}
+
+		&.-primary {
+			span {
+				color: #1eeccd;
+			}
+		}
+		
+		&.-explanation {
+			font-size: 25px;
+			
+			span {
+				text-decoration: underline;
+			}
+			
+			// === MEDIA QUERIES == 
+			@include min-screen($s) {
+				width: 51%;
+			}	
+		}
+		
+		&.-secondary {
+			span {
+				color: #eb189e;
+			}
+		}
+    }
+
+    // === ACTION BUTTON ===
+    &__action-buttons {
+        text-align: center;
+        width: 80%;
+		margin: 120px auto 25px auto;
+		
+		// === MEDIA QUERIES ===
+		@include min-screen($xs) {
+			width: 70%;
+		}
+		
+		@include min-screen($s) {
+			width: 60%;
+		}
+		
+		@include min-screen($m) {
+			width: 700px;
+			@include flexbox();
+       	 	@include flex-wrap(wrap);   
+        	@include justify-content(space-between);
+		}
+		
+		@include min-screen($l) {
+			margin-top: 150px;
+		}
+    }
+
+    // === INFO BOX ===
+	&__infobox {
+        margin: 75px auto;
+		width: 80%;
+		//max-width: 300px;
+		margin: 75px auto;
+		
+		// === MEDIA QUERIES ===
+		@include min-screen($m) {
+        	@include flexbox();
+       	 	@include flex-wrap(wrap);   
+        	@include justify-content(space-between);	
+		}
+		
+		@include min-screen($l) {
+			//max-width: 960px;
+			
+		}
+		@include min-screen($xl) {
+			max-width: $element-max-width;
+			
+		}
+		
+		.-first {
+			margin-top: 75px;
+		}
+    } 
+	
+	&__infobox-item {
+		/*margin-bottom: 30px;
+		margin-left: auto;
+		margin-right: auto;*/
+		//width: 300px;
+		margin: 60px auto 30px auto;
+		
+		@include min-screen($s) {
+			width: 300px;
+        	@include flex(0 0 40%);
+		}
+		
+		@include min-screen($m) {
+			width: auto;
+        	@include flex(0 0 40%);
+		}
+		
+		@include min-screen($l) {
+        	@include flex(0 0 20%);
+			
+		}
+	}
+	
+	&__infobox-image {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+
+/* =========================
+*  === FRONT QUICK START ===
+*  ========================= */ 
+.front-quick-start {
+	// === GRADIENT ===
+	@include gradient-animate(45deg, 20s, (#a4f1df, #f6eec2, #18f0b8));
+
+	
+	padding: 50px 0;
+		
+	// === TITLE ===
+	&__title {
+        text-align: center;
+        font-size: 35px;
+		margin: 0 0 30px 0; 
+	}
+	
+	// == CODE ==
+	&__code {
+		margin-bottom: 30px;
+		
+		@include min-screen($l) {
+			width: 80%;
+    		margin: 0 auto 25px auto;
+			margin-bottom: 25px;
+		}
+		
+		@include min-screen($xl) {
+			max-width: $element-max-width;
+			margin: 0 auto 25px auto;
+		}
+	}
+	
+	&__code-box {
+		@include flexbox();
+		@include flex-wrap(wrap);
+		
+		@include min-screen($l) {
+			align-items: stretch;
+		}
+	}
+	
+	&__coding {
+		margin: 0px;
+		
+		.line-numbers {
+			margin: 0px;
+			border-radius: 5px 5px 0 0;
+			height: 100%;
+			width: 100%;
+		}
+		
+		@include min-screen($xs) {
+			width: 90%;
+    		margin: auto;
+		}
+		
+		@include min-screen($l){
+			@include flex(0 0 60%);
+			margin: 0px;
+			overflow: hidden;
+						
+			.line-numbers {
+				border-radius: 5px 0 0 5px;
+			}
+		}
+		
+		@include min-screen($xl) {
+			width: 65%; 
+		}	
+	}
+	
+	&__code-subtitle {
+		background-color: rgba(255, 255, 255, 0.4);
+		border-radius: 0 0 5px 5px;
+		width: 90%;
+		margin: auto;
+		padding: 8px 8px;
+
+		@include min-screen($l) {
+			@include flex(0 0 40%);
+			margin: 0px;
+			border-radius: 0 5px 5px 0;
+		}
+		
+		@include min-screen($xl) {
+			max-width: $element-max-width;
+			//margin: auto;
+			width: 35%; 
+		}
+	}    
+
+	&__code-title {
+		font-size: 25px;
+		font-weight: 700;
+		width: 80%;
+		
+		@include min-screen($xl) {
+			max-width: $element-max-width;
+			margin: auto;
+		}
+	}
+	
+	// === BUTTON ===
+	&__button {
+		width: 90%;
+		margin: auto;
+		
+		@include min-screen($l) {
+			@include flexbox();
+			@include justify-content(flex-end);
+			width: 80%;
+			margin-top: 25px
+		}
+		
+		@include min-screen($xl) {
+			max-width: $element-max-width;
+			margin: auto;
+			margin-top: 25px;
+		}	
+	}
+}
+
+
+/* ===========================
+*  === FRONT MORE FEATURES ===
+*  =========================== */ 
+.front-more-features {
+	padding: 25px 0 0 0;
+	margin-top: 35px;
+	
+    // === TITLE ===
+	&__title {
+        text-align: center;
+        font-size: 35px;
+	}
+	
+	// === INFO BOX ===
+	&__infobox {
+		margin: 75px auto;
+		width: 80%;
+		//max-width: 300px;
+		margin: 55px auto 20px auto;
+		
+		// === MEDIA QUERIES ===
+		@include min-screen($m) {
+        	@include flexbox();
+       	 	@include flex-wrap(wrap);   
+     
+		}
+		
+		@include min-screen($l) {
+			//max-width: 960px;
+			
+		}
+		@include min-screen($xl) {
+			max-width: $element-max-width;
+			
+		}
+    }
+	
+	&__infobox-item {
+		margin-bottom: 50px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include min-screen($s) {
+			width: 300px;
+        	//@include flex(0 0 40%);
+		}
+		
+		@include min-screen($m) {
+			width: auto;
+        	@include flex(0 0 40%);
+		}
+		
+		@include min-screen($l) {
+        	@include flex(0 0 20%);
+		}
+	}
+}
+
+
+/* ========================
+*  === FRONT EXTENSIONS ===
+*  ======================== */ 
+.front-extensions {
+	padding: 5px 0;
+	width: 80%;
+	margin: 0 auto 25px auto;
+	text-align: center;	
+	
+	&__title {
+        text-align: center;
+        font-size: 35px;
+	}
+	
+	&__list {
+		@include min-screen($l) {
+		    @include flexbox();
+       	 	@include flex-wrap(wrap);
+			@include justify-content(center);
+		}
+		
+		@include min-screen($xl) {
+			max-width: $element-max-width;
+			margin: auto;
+		}
+	}
+	
+	&__list-box {
+		margin-top: 35px;
+		border-radius: 5px;
+		padding: 15px 5px;
+		
+		@include x-transition(x-linear-gradient 500ms ease);
+		
+		@include min-screen($l) {
+			min-width: 370px;
+			width: 100%;
+			display: inherit;
+			background: none;
+			@include flexbox();
+			@include justify-content(center);
+			@include x-transition(background 0.3s ease-in);
+		
+			&:hover {
+				@include min-screen($xs) {
+					background-color: #fff;
+					border-color: red;
+				}
+
+				@include min-screen($l) {
+					background: #D2F2CC;
+					
+					//@include gradient-animate(45deg, 30s, (#db5640, #18a2f0, #18f0b8));
+				}
+			}	
+		}
+	}
+
+	.-title {
+		margin-top: 12px;
+
+		@include min-screen($l) {
+			text-align: left;
+			width: 200px;
+			margin-bottom: 0;
+			@include flex(0 0 30%);
+		}
+	}
+
+	.-info-text {
+		@include min-screen($l) {
+			text-align: left;
+			font-size: 15px;
+			margin-top: 12px;
+			margin-bottom: 7px;
+			@include flex(0 0 45%);
+		}
+	}
+
+	.-last {
+		margin-bottom: 75px;
+	}
+}

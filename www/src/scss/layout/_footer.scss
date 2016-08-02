@@ -1,0 +1,90 @@
+footer {
+    background-color: #000;
+    color: #fff;
+    height: auto;
+}
+
+.front-footer {
+	width: 80%;
+	margin: auto;
+	padding-top: 30px;
+	
+	&__footer-info {
+		 margin-top: 20px;
+		
+		@include min-screen($m) {
+			@include flexbox();
+			@include flex-wrap(wrap);	
+			@include justify-content(center);
+		}
+		
+		@include min-screen($l) {
+			margin-top: 50px;
+		}
+		
+		@include min-screen($xl) {
+			max-width: $element-max-width;
+			margin: 50px auto 0 auto;
+		}
+	}
+	
+	&__social-media {
+		width: 100%;
+		
+		&.copyright-text {
+			@include min-screen($s) {
+				width: 70%;	
+			}
+
+			@include min-screen($l) {
+				width: 260px;
+			}
+		}
+		
+		@include min-screen($xs) { 
+			width: 250px;
+		}
+		
+		@include min-screen($m) {
+			width: 200px;
+			height: 200px;
+			@include flex(0 0 30%);
+		}
+		
+		@include min-screen($xl) {
+			margin-right: 25px;
+		}
+	}
+	
+	&__link {
+		color: #fff;
+		font-weight: 700;
+	}
+
+	&__related {
+		padding-top: 5px;
+		
+		@include min-screen($m) {
+			width: 200px;
+			height: 200px;
+			padding: 0 0;
+			@include flex(0 0 30%);
+		}
+		
+		@include min-screen($xl) {
+			margin-right: 25px;
+		}
+	}
+
+	&__joinbox {
+		padding-top: 5px;
+		padding-bottom: 25px;
+		
+		@include min-screen($m) {
+			width: 200px;
+			height: 200px;
+			padding: 0 0;
+			@include flex(0 0 30%);	
+		}
+	}
+}

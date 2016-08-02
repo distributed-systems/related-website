@@ -1,0 +1,20 @@
+{
+	"name"								: "eventbooster-frontend"
+	, "version"							: "0.0.1"
+	, "authors"							: [ {
+		"name"							: "Serdar Deberoglu"
+		, "email"						: "serdar@joinbox.com"
+	}]
+	, "ignore"							: [
+		  "**/.*"
+		, "node_modules"
+		, "bower_components"
+	],
+	"dependencies"						: {
+		  "sass-css3-mixins"			: "latest"
+		, "sass-flex-mixin"				: "latest"
+		, "sass-mixins"					: "latest"
+		, "sass-mediaqueries"			: "1.6.x"
+		, "prism"						: "latest"
+	}
+}

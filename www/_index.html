@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <title>Related</title>
+	    <meta name="description" content="">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    
+	    <!-- Fav Icons & Touch Icons -->
+	    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+      
+	    <!--script src="dist/js/scripts.min.js"></script-->
+	    <script src="/www/src/bower_components/prism/prism.js"></script>
+		<script src="/www/src/bower_components/prism/plugins/line-numbers/prism-line-numbers.js"></script>
+	    
+	    <link rel="stylesheet" href="dist/css/main.min.css" />
+	    <!--link rel="stylesheet" href="/www/src/bower_components/prism/themes/prism.css" /-->
+	    <link reL="stylesheet" href="/www/src/bower_components/prism/plugins/line-numbers/prism-line-numbers.css" />
+
+
+	    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	    <script>
+	        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+	        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+	        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+	        e.src='https://www.google-analytics.com/analytics.js';
+	        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+	        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+	    </script>
+	</head>
+	<body>
+        <main>
+        	<div class="front-header">                
+                <div class="front-header__intro">
+                    <h1 class="front-header__intro-title -primary"><span>Related</span> is an</h1>
+                    <h3 class="front-header__intro-title -explanation"><span>minimalistic</span>, <span>unopiniated</span> and <span>open source</span></h3>
+                    <h1 class="front-header__intro-title -secondary"><span>ORM</span> for NodeJS.</h1>
+                </div>
+			
+                
+                <div class="front-header__action-buttons">
+                    <a href="#" class="button -filled -hasIcon -whiteArrow">Documentation</a>
+                    <a href="#" class="button -hasIcon -pinkArrow"><span>npm</span><span>related@2.7.5</span></a>
+                    <a href="#" class="button -hasIcon -pinkArrow"><span>GitHub</span><span>latest commit 3h ago</span></a>
+                </div>
+
+                <div class="front-header__infobox">
+                    <div class="front-header__infobox-item -first">
+                        <img src="img/dbmodels.svg" class="front-header__infobox-image" height="55px" width="100px">
+                        <h4 class="heading -fourth">Cluster Support</h4>
+                        <p>Related‘s consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+
+                    <div class="front-header__infobox-item">
+                        <img src="img/vector-smart-object.svg" class="front-header__infobox-image" height="70px" width="100px">
+                        <h4 class="heading -fourth">Cluster Support</h4>
+                        <p>Related‘s consectetur adipiscing elit, <a href="#">sed do eiusmod</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+
+                    <div class="front-header__infobox-item">
+                        <img src="img/migratioons.svg" class="front-header__infobox-image" height="70px" width="100px">                   
+                        <h4 class="heading -fourth">Cluster Support</h4>
+                        <p>Related‘s consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+
+                    <div class="front-header__infobox-item">
+                        <img src="img/cluster.svg" class="front-header__infobox-image" height="70px" width="100px">
+                        <h4 class="heading -fourth">Cluster Support</h4>
+                        <p>Related‘s consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>                                                            
+                </div>
+            </div>
+            
+            <div class="front-quick-start">
+                <div>
+                    <h2 class="front-quick-start__title">Quick Start</h2>
+                </div>
+               
+                <div class="front-quick-start__code">
+                    <h4 class="heading -quick-start">1. Install</h4>
+                    <div class="front-quick-start__code-box">
+                    	<div class="front-quick-start__coding">
+                    <pre class="line-numbers"><code class="language-javascript">$ nmp i --save related</code></pre>
+						</div>
+                    <p class="front-quick-start__code-subtitle">Related comes as a npm module. It requires nodeJS. Install by entering the command on the left side into your terminal.</p>
+					</div>
+                </div>
+                
+                <div class="front-quick-start__code">
+                    <h4 class="heading -quick-start">2. Connect to any existing database</h4>
+                    <div class="front-quick-start__code-box">
+                    	<div class="front-quick-start__coding">
+                    <pre class="line-numbers"><code class="language-javascript">const Related = require('related');
+
+const customerDatabase = new Related({
+	  type      : 'postgres'
+	, database  : 'customer'
+	, hosts: [{
+		  host           : '10.1.33.7'
+		, username       : 'customer-db-user'
+		, password       : 'my-secure-pw'
+	}]
+});</code></pre>
+                   		</div>
+                    <p class="front-quick-start__code-subtitle">Related comes as a npm module. It requires nodeJS. Install by entering the command on the left side into your terminal.</p>
+                  </div>
+                </div>
+                
+                <div class="front-quick-start__code">
+                    <h4 class="heading -quick-start">3. Execute Queries</h4>
+                    <div class="front-quick-start__code-box">
+                    	<div class="front-quick-start__coding">
+                    <pre class="line-numbers"><code class="language-javascript">// get a list of customers with emails ending in 
+// @joinbox.com, start with record 10, return not 
+// more than 100 records and also load the company 
+// info for all customers
+customerDatabase.customers(['id', 'name', 'email'], {
+	email: Related.like('%@joinbox.com')
+}).getCompany('*').offset(10).limit(100).order('name').find().then((data) => {
+
+	console.log(data);
+	//  [{
+	//        id: 23
+	//      , name: 'Michael van der Weg'
+	//      , email: 'michael@joinbox.com'
+	//      , id_company: 3
+	//      , company: {
+	//            id: 56
+	//          , name: 'Joinbox Ltd.'
+	//          , countryCode: 'ch'
+	//      }
+	//  }]
+}).catch(err => console.log(err));</code></pre>
+						</div>
+						<div class="front-quick-start__code-subtitle">
+							<p>Related comes as a npm module. It requires nodeJS. Install by entering the command on the left side into your terminal.</p>
+               			</div>
+                	</div>
+				</div>
+                
+                <div class="front-quick-start__button">
+                    <a href="#" class="button -simple -hasIcon -blackArrow -left">Documentation</a>
+                    <a href="#" class="button -simple -hasIcon -blackArrow">Download</a>
+                </div>
+            </div>
+            
+            <div class="front-more-features">
+                <div>
+                    <h2 class="front-more-features__title">More Features</h2>
+                </div>
+                
+                <div class="front-more-features__infobox">
+                    <div class="front-more-features__infobox-item">
+                        <h4 class="heading -fourth">Open Source</h4>
+                        <p>Related‘s consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+
+                    <div class="front-more-features__infobox-item">
+                        <h4 class="heading -fourth">Maintained</h4>
+                        <p>Related‘s consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+
+                    <div class="front-more-features__infobox-item">
+                        <h4 class="heading -fourth">Free</h4>
+                        <p>Related‘s consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+
+                    <div class="front-more-features__infobox-item -last">
+                        <h4 class="heading -fourth">Backed</h4>
+                        <p>Related‘s consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>   
+                </div>         
+            </div>
+            
+            <div class="front-extensions">
+                <div>
+                    <h2 class="front-extensions__title">Extensions</h2>
+                </div>
+                
+                <div class="front-extensions__list">
+                    <div class="front-extensions__list-box">
+                        <h4 class="heading -fifth -title">Timestamps</h4>
+                        <p class="-info-text">Support for automatic timestamps and soft deletes</p>
+                    </div>
+                    
+                    <div class="front-extensions__list-box">
+                        <h4 class="heading -fifth -title">Geo</h4>
+                        <p class="-info-text">Area and distance searches using longtitude and latitude</p>
+                    </div>
+                    
+                    <div class="front-extensions__list-box">
+                        <h4 class="heading -fifth -title">Localization</h4>
+                        <p class="-info-text">Support for multilanguage content in the relation model</p>
+                    </div>
+                    
+                    <div class="front-extensions__list-box">
+                        <h4 class="heading -fifth -title">Nested Sets</h4>
+                        <p class="-info-text">Support for nested sets</p>
+                    </div>
+                    
+                    <div class="front-extensions__list-box">
+                        <h4 class="heading -fifth -title">Reference Counting</h4>
+                        <p class="-info-text">Counts item that are referenced by the current entity</p>
+                    </div>
+                    
+                    <div class="front-extensions__list-box -last">
+                        <h4 class="heading -fifth -title">Timestamps</h4>
+                        <p class="-info-text">Support for automatic timestamps and soft deletes</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="front-footer">
+				<div class="front-footer__footer-info">	
+					<div class="front-footer__social-media">
+						<a href="#"><img src="http://placehold.it/40x40"></a> 
+						<a href="#"><img src="http://placehold.it/40x40"></a>
+						<a href="#"><img src="http://placehold.it/40x40"></a>
+						<a href="#"><img src="http://placehold.it/40x40"></a>
+						<p class="copyright-text">Related was created by <a href="#" class="front-footer__link">Joinbox</a>. Website powered by <a href="#" class="front-footer__link">Fluffy</a> and Related.</p>
+					</div>
+
+					<div class="front-footer__related">
+						<h4 class="heading -footer-title">Related Foundation</h4>
+						<p>Related‘s consectetur adipiscing elit, sedo eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad excitation ullamco laboris nisi ut aliquip exea commodo consequat ad minim veniam comparatur.</p>
+					</div>
+
+					<div class="front-footer__joinbox">
+						<h4 class="heading -footer-title">Joinbox</h4>
+						<p>Related‘s consectetur adipiscing elit, sedo eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad excitation ullamco laboris nisi ut aliquip exea commodo consequat ad minim veniam comparatur.</p>
+					</div>
+           		</div>
+            </div>
+        </footer>
+	</body>
+</html>

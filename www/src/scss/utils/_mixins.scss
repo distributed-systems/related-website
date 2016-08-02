@@ -1,0 +1,186 @@
+@mixin brightness($value: 0.35) {
+	-o-filter: brightness($value);
+	-ms-filter: brightness($value);
+	-moz-filter: brightness($value);
+	-webkit-filter: brightness($value);
+	filter: brightness($value);
+}
+
+
+@mixin word-wrap() {
+	word-break:     break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens:    auto;
+	hyphens:         auto;
+}
+
+@mixin ellipsis() {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+// Clearfix
+@mixin clearfix() {
+	&:after {
+		content: "";
+		display: table; 
+		clear: both;
+	}
+}
+
+// Reset list
+@mixin unstyled-list() {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+
+
+// triangle mixin
+@mixin triangle($size, $color, $direction) {
+  height: 0;
+  width: 0;
+
+  $width: nth($size, 1);
+  $height: nth($size, length($size));
+
+  $foreground-color: nth($color, 1);
+  $background-color: if(length($color) == 2, nth($color, 2), transparent);
+
+  @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
+
+    $width: $width / 2;
+    $height: if(length($size) > 1, $height, $height/2);
+
+    @if $direction == up {
+      border-bottom: $height solid $foreground-color;
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+
+    } @else if $direction == right {
+      border-bottom: $width solid $background-color;
+      border-left: $height solid $foreground-color;
+      border-top: $width solid $background-color;
+
+    } @else if $direction == down {
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+      border-top: $height solid $foreground-color;
+
+    } @else if $direction == left {
+      border-bottom: $width solid $background-color;
+      border-right: $height solid $foreground-color;
+      border-top: $width solid $background-color;
+    }
+  }
+
+  @else if ($direction == up-right) or ($direction == up-left) {
+    border-top: $height solid $foreground-color;
+
+    @if $direction == up-right {
+      border-left:  $width solid $background-color;
+
+    } @else if $direction == up-left {
+      border-right: $width solid $background-color;
+    }
+  }
+
+  @else if ($direction == down-right) or ($direction == down-left) {
+    border-bottom: $height solid $foreground-color;
+
+    @if $direction == down-right {
+      border-left:  $width solid $background-color;
+
+    } @else if $direction == down-left {
+      border-right: $width solid $background-color;
+    }
+  }
+
+  @else if ($direction == inset-up) {
+    border-color: $background-color $background-color $foreground-color;
+    border-style: solid;
+    border-width: $height $width;
+  }
+
+  @else if ($direction == inset-down) {
+    border-color: $foreground-color $background-color $background-color;
+    border-style: solid;
+    border-width: $height $width;
+  }
+
+  @else if ($direction == inset-right) {
+    border-color: $background-color $background-color $background-color $foreground-color;
+    border-style: solid;
+    border-width: $width $height;
+  }
+
+  @else if ($direction == inset-left) {
+    border-color: $background-color $foreground-color $background-color $background-color;
+    border-style: solid;
+    border-width: $width $height;
+  }
+}
+
+
+
+
+
+
+
+
+@mixin horizontal-gradient($from, $to, $stop: 100%) {
+  /* fallback/image non-cover color */
+  background-color: $from;
+
+  /* Firefox 3.6+ */
+  background-image: -moz-linear-gradient(left, $from 0%, $to $stop);
+
+  /* Safari 4+, Chrome 1+ */
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $from), color-stop($stop, $to));
+
+  /* Safari 5.1+, Chrome 10+ */
+  background-image: -webkit-linear-gradient(left, $from 0%, $to $stop);
+
+  /* Opera 11.10+ */
+  background-image: -o-linear-gradient(left, $from 0%, $to $stop);
+
+  /* IE10+ */
+  background: -ms-linear-gradient(left, $from 0%, $to $stop);
+
+  /* Standard */
+  background: linear-gradient(to right, $from 0%, $to $stop);
+
+  /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+}
+
+
+
+
+@mixin scrolling-shadows($background-color: rgb(255, 255, 255), $shadow-intensity: 0.2, $shadow-color: rgb(0,0,0), $cover-size: 40px, $shadow-size: 14px) {
+
+	background:
+		// Shadow covers 
+		linear-gradient($background-color 30%, rgba($background-color,0)),
+		linear-gradient(rgba($background-color,0), $background-color 70%) 0 100%,
+
+		// Shadows 
+		radial-gradient(50% 0, farthest-side, rgba($shadow-color,$shadow-intensity), rgba($shadow-color,0)),
+		radial-gradient(50% 100%,farthest-side, rgba($shadow-color,$shadow-intensity), rgba($shadow-color,0)) 0 100%;
+	background:
+		// Shadow covers 
+		linear-gradient($background-color 30%, rgba($background-color,0)),
+		linear-gradient(rgba($background-color,0), $background-color 70%) 0 100%,
+
+		// Shadows 
+		radial-gradient(farthest-side at 50% 0, rgba($shadow-color,$shadow-intensity), rgba($shadow-color,0)),
+		radial-gradient(farthest-side at 50% 100%, rgba($shadow-color,$shadow-intensity), rgba($shadow-color,0)) 0 100%;
+	background-repeat: no-repeat;
+	background-color: $background-color;
+	background-size: 100% $cover-size, 100% $cover-size, 100% $shadow-size, 100% $shadow-size;
+
+	// Opera doesn't support this in the shorthand 
+	background-attachment: local, local, scroll, scroll;
+}
